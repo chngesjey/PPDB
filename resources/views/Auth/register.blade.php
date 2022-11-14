@@ -1,71 +1,141 @@
-<!-- css -->
-<link rel="stylesheet" href="{{ asset('asset/login/all.min.css') }}">
+<html lang="en">
 
-<input class="c-checkbox" type="checkbox" id="start">
-<input class="c-checkbox" type="checkbox" id="progress2">
-<input class="c-checkbox" type="checkbox" id="progress3">
-<input class="c-checkbox" type="checkbox" id="finish">
-<div class="c-form__progress"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Inventory App Register</title>
 
-<div class="c-formContainer">
-  <div class="c-welcome">Welcome aboard!</div>
-  <form class="c-form" action="">
-    <div class="c-form__group">
-      <label class="c-form__label" for="username">
-                    <input
-                        type="text"
-                        id="username"
-                        class="c-form__input"
-                        placeholder=" "
-                        pattern="[^\s]+"
-                        required>
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="{{asset ('assets/modules/bootstrap.min.css')}}">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="{{asset ('assets/modules/all.min.css')}}">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="{{asset ('assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset ('assets/css/components.css')}}">
+    <link rel="stylesheet" href="feedback.css">
+</head>
 
-                    <label class="c-form__next" for="progress2" role="button">
-                        <span class="c-form__nextIcon"></span>
-                    </label>
+<body>
+  <div id="app">
+    <section class="section">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
+            <div class="login-brand">
+              <!-- <img src="https://yt3.ggpht.com/ytc/AMLnZu9JW4gVnRwef3M2GbDxrfyO00bqDxawTFifLKcY=s900-c-k-c0x00ffffff-no-rj" alt="logo" width="100" class="shadow-light rounded-circle"> -->
+            </div>
 
-      <span class="c-form__groupLabel">Create your username.</span>
-      <b class="c-form__border"></b>
-      </label>
-    </div>
+            <div class="card card-primary">
+              <div class="card-header"><h4>Register</h4></div>
 
-    <div class="c-form__group">
-      <label class="c-form__label" for="femail">
-                    <input
-                        type="email"
-                        id="femail"
-                        class="c-form__input"
-                        placeholder=" "
-                        pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
-                        required>
+              <div class="card-body">
+                  <div class="form-group">
+                        <form action="{{route('simpanRegister')}}" method="POST">
+                            @csrf
+                            <label for="name">Username</label>
+                            <input id="name" type="text" class="form-control" name="nama" autocomplete="off" autofocus>
+                        </div>
+                    <!-- <div class="form-group col-6">
+                      <label for="last_name">Last Name</label>
+                      <input id="last_name" type="text" class="form-control" name="last_name">
+                    </div> -->
+                 
 
-                    <label class="c-form__next" for="progress3" role="button">
-                        <span class="c-form__nextIcon"></span>
-                    </label>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" class="form-control" name="email">
+                    <div class="invalid-feedback">
+                    </div>
+                  </div>
 
-      <span class="c-form__groupLabel">What's your email?</span>
-      <b class="c-form__border"></b>
-      </label>
-    </div>
+                  
+                    <div class="form-group">
+                      <label for="password" class="d-block">Password</label>
+                      <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="password">
+                      <div id="pwindicator" class="pwindicator">
+                        <div class="bar"></div>
+                        <div class="label"></div>
+                      </div>
+                    </div>
 
-    <div class="c-form__group">
-      <label class="c-form__label" for="fpass">
-                    <input
-                        type="password"
-                        id="fpass"
-                        class="c-form__input"
-                        placeholder=" "
-                        required>
+                    <!-- <div class="form-group col-6">
+                      <label for="password2" class="d-block">Password Confirmation</label>
+                      <input id="password2" type="password" class="form-control" name="password-confirm">
+                    </div> -->
 
-                    <label class="c-form__next" for="finish" role="button">
-                        <span class="c-form__nextIcon"></span>
-                    </label>
+                  <!-- <div class="form-divider">
+                    Your Home
+                  </div>
 
-      <span class="c-form__groupLabel">Create your password.</span>
-      <b class="c-form__border"></b>
-      </label>
-    </div>
+                  <div class="row">
+                    <div class="form-group col-6">
+                      <label>Country</label>
+                      <select class="form-control selectric">
+                        <option>Indonesia</option>
+                        <option>Palestine</option>
+                        <option>Syria</option>
+                        <option>Malaysia</option>
+                        <option>Thailand</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-6">
+                      <label>Province</label>
+                      <select class="form-control selectric">
+                        <option>West Java</option>
+                        <option>East Java</option>
+                      </select>
+                    </div>
+                  </div> -->
 
-    <label class="c-form__toggle" for="start">Register<span class="c-form__toggleIcon"></span></label>
-  </form>
-</div>
+                  <!-- <div class="row">
+                    <div class="form-group col-6">
+                      <label>City</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-6">
+                      <label>Postal Code</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div> -->
+
+                  <div class="form-group">
+                    <div class="container"></div>                       
+                        <a href="{{route('login')}}" class="nav-link">Sudah Memiliki Akun</a>
+                    </div>
+                  </div>
+
+                  <!-- Tombol Submit -->
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">
+                      Register
+                    </button>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+            <!-- Footer -->
+            @include('template.footer')
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="{{asset ('assets/modules-js/jquery.min.js')}}"></script>
+    <script src="{{asset ('assets/modules-js/popper.js')}}"></script>
+    <script src="{{asset ('assets/modules-js/tooltip.js')}}"></script>
+    <script src="{{asset ('assets/modules-js/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset ('assets/modules-js/nicescroll/jquery.nicescroll.min.js')}}"></script>
+    <script src="{{asset ('assets/modules-js/moment.min.js')}}"></script>
+    <script src="{{asset ('assets/modules-js/stisla.js')}}"></script>
+
+    <!-- JS Libraies -->
+
+    <!-- Page Specific JS File -->
+
+    <!-- Template JS File -->
+    <script src="{{asset('assets/js/scripts.js')}}"></script>
+    <script src="{{asset('assets/js/custom.js')}}"></script>
+</body>
