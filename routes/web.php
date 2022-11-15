@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
     AuthController,
-    DashboardController,
-
+    AuthAdminController,
+    DashboardController
 };
 
 /*
@@ -27,6 +27,11 @@ Route::get('/', function () {
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/postlogin', [AuthController::class, 'postlogin'])->name('postlogin');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+// Route Admin
+Route::get('/adminLogin', [AuthAdminController::class, 'adminLogin'])->name('adminLogin');
+Route::post('/postAdmin', [AuthAdminController::class, 'postAdmin'])->name('PostAdmin');
+Route::get('/logout', [AuthAdminController::class, 'logout'])->name('logout');
 
 // Route Register
 Route::get('/register', [AuthController::class, 'register'])->name('register');
