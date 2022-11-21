@@ -34,7 +34,7 @@
                             </div>
 
                             <div class="card-body">
-                                <form method="POST" action="/postlogin">
+                                <form method="POST" action="{{route ('admin.adminlogin')}}">
                                     @csrf
                                     <div class="form-group">
                                         <label for="email">Email</label>

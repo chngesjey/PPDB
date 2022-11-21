@@ -132,7 +132,7 @@
                                     </div>
                                     <div class="right-text">
                                         <h4>Kecantikan</h4>
-                                        <p>Merupakan salah satu program kompetensi yang mempelajari tentang perawatan dan rias kulit maupun rambut.</p>
+                                        <p>Program kompetensi yang mempelajari tentang menjadi good Looking</p>
                                     </div>
                                 </div>
                             </div>
@@ -142,8 +142,8 @@
                                         <img src="assets/images/service-icon-02.png" alt="">
                                     </div>
                                     <div class="right-text">
-                                        <h4>Data Reporting</h4>
-                                        <p>Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter</p>
+                                        <h4>Tata Boga</h4>
+                                        <p>Program kompetensi yang mempelajari tentang dunia permasakan</p>
                                     </div>
                                 </div>
                             </div>
@@ -153,8 +153,8 @@
                                         <img src="assets/images/service-icon-03.png" alt="">
                                     </div>
                                     <div class="right-text">
-                                        <h4>Web Analytics</h4>
-                                        <p>Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter</p>
+                                        <h4>Roblox</h4>
+                                        <p>Program kompetensi yang mempelajari tentang dunia roblox</p>
                                     </div>
                                 </div>
                             </div>
@@ -164,8 +164,8 @@
                                         <img src="assets/images/service-icon-04.png" alt="">
                                     </div>
                                     <div class="right-text">
-                                        <h4>SEO Suggestions</h4>
-                                        <p>Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter</p>
+                                        <h4>Baku Hantam</h4>
+                                        <p>Program kompetensi yang mempelajari pukul-memukul</p>
                                     </div>
                                 </div>
                             </div>

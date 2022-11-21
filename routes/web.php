@@ -4,8 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
     AuthController,
     AuthAdminController,
-    DashboardController
+    DashboardController,
+    
 };
+use App\Http\Controllers\Admin\Auth\AuthAdminLoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,9 +31,13 @@ Route::post('/postlogin', [AuthController::class, 'postlogin'])->name('postlogin
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Route Admin
-Route::get('/adminLogin', [AuthAdminController::class, 'adminLogin'])->name('adminLogin');
-Route::post('/postAdmin', [AuthAdminController::class, 'postAdmin'])->name('PostAdmin');
-Route::get('/logout', [AuthAdminController::class, 'logout'])->name('logout');
+Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
+    Route::namespace('Auth')->group(function(){
+        //Route Login 
+        Route::get('login', [AuthAdminLoginController::class,'create'])->name('login');
+        Route::post('login', [AuthAdminLoginController::class,'store'])->name('adminlogin');
+    });
+});
 
 // Route Register
 Route::get('/register', [AuthController::class, 'register'])->name('register');
